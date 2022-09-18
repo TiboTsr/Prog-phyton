@@ -1,0 +1,20 @@
+from random import randint
+
+nb_ordi=randint(1,100)
+print("Tu as 10 essais pour trouver le nombre entre 1 et 100")
+nb_essais=1
+nb_utilisateur=int(input("Nombre entre 1 et 100,tu as 10 essais, tu as choisis le nombre..."))
+
+while (nb_ordi!=nb_utilisateur) and (nb_essais<10):
+    
+    if (nb_utilisateur<nb_ordi):
+        print("C'est plus")
+    elif (nb_utilisateur>nb_ordi):
+        print("C'est moins")
+    nb_essais=nb_essais+1
+    nb_utilisateur=int(input("Choisis un nombre entre 1 et 100, tu as choisis le nombre..."))
+
+if nb_ordi==nb_utilisateur:
+    print("Bravo tu as gagné, tu as trouvé en seulement",nb_essais,"essais")
+else:
+    print("Dommage, tu as perdu, le nombre à trouver etait",nb_ordi)
