@@ -1,0 +1,32 @@
+from random import randint
+
+dé_joueur1=randint(1,6)
+dé_joueur2=randint(1,6)
+points_joueur1=0
+points_joueur2=0
+print("Dé joueur 1 :",dé_joueur1,"/ Dé joueur 2 :",dé_joueur2)
+print("Joueur 1 / score =",points_joueur1,"Joueur 2 : score =", points_joueur2)
+
+while (points_joueur1!=5)and(points_joueur2!=5):
+
+    if dé_joueur1<dé_joueur2:
+        points_joueur2=points_joueur2+1
+        dé_joueur1=randint(1,6)
+        dé_joueur2=randint(1,6)
+        print("Dé joueur 1 :",dé_joueur1,"/ Dé joueur 2 :",dé_joueur2)
+        print("Joueur 1 / score =",points_joueur1,"Joueur 2 : score =", points_joueur2)
+    if dé_joueur1>dé_joueur2:
+        points_joueur1=points_joueur1+1
+        dé_joueur1=randint(1,6)
+        dé_joueur2=randint(1,6)
+        print("Dé joueur 1 :",dé_joueur1,"/ Dé joueur 2 :",dé_joueur2)
+        print("Joueur 1 / score =",points_joueur1,"Joueur 2 : score =", points_joueur2)
+    else:
+        dé_joueur1=randint(1,6)
+        dé_joueur2=randint(1,6)
+        print("Dé joueur 1 :",dé_joueur1,"/ Dé joueur 2 :",dé_joueur2)
+
+if points_joueur1==5:
+    print("Bravo joueur 1 tu as gagné")
+if points_joueur2==5:
+    print("Bravo joueur 2 tu as gagné")
