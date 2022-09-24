@@ -1,0 +1,23 @@
+# Si nb_a_conv=nb_conv alors le programme affichera "Bravo".
+# Sinon le programme demandera d'entrer un nouveau résultat de la conversion.
+# Le programme se terminera lorsque l'utilisateur aura rentré le bon résultat de la conversion.
+# Exemple si nb_a_conv=1001 et vous rentrez nb_conv=12, il faudra recommencer car il faut nb_conv=9.
+# Aide : int("101010",2) donne la conversion en base 10 de (101010)2.
+
+print("Choissez la base 2 ou 16 : ")
+base=int(input())
+print("Choisisez un nombre à convertir avec la base que vous avez chosis :")
+nb_a_conv=input()
+print("Entrez le résultat de cette conversion : ")
+nb_conv=int(input())
+
+if base==2: 
+    nb_a_trouver=int(nb_a_conv,2)
+else:
+    nb_a_trouver=int(nb_a_conv,16)
+
+while (nb_conv!=nb_a_trouver):
+    print("Vous n'avez pas trouver le bon nombre, retentez votre chance.")  
+    print("Entrez le résultat de cette conversion : ")
+    nb_conv=int(input())
+print("Bravo tu as gagné")
