@@ -1,0 +1,7 @@
+#Le programme permet de calculer le nombre de jours entre deux date
+from datetime import date 
+
+date1 = date(YYYY,MM,JJ)  #Rentrez la date la plus ancienne sous forme Année,mois,jour
+date2 = date(YYYY,MM,JJ)  #Rentrez la date la plus recente sous forme Année,mois,jour  
+delta = date2 - date1
+print(delta.days)
