@@ -1,0 +1,32 @@
+import random
+
+L_couleurs = ['A', 'B', 'C', 'D', 'E', 'F']
+def Master_facile(L_couleurs):
+    couleurs=random.sample(L_couleurs, 4)
+    return couleurs
+
+def Master_dur(L_couleurs):
+    couleurs=random.choices(L_couleurs,k=4)
+    return couleurs
+
+def regles():
+    print("Bienvenue dans le jeu mastermind")
+    print("--------------------------------")
+    print("Les regles sont simples, le but est de trouver la combinaison (Entre A et F) choisis par l'ordinateur")
+    print("--------------------------------")
+    print("Entre chaque essais nous vous dirons combien de lettres sont bien placées et combien sont mal placées")
+    print("--------------------------------")
+    print("Vous avez le choix entre 2 niveaux, bonne chance!")
+    print("--------------------------------")
+
+print(regles())
+start=int(input("Voulez vous lancer une partie \n 1-je veux jouer\n 2-je ne veux pas jouer\n Réponse :"))
+if (start==1):
+    start2=int(input("Choissez entre le niveau facile ou dificile \n 1-Niveau facile (Les lettres ne peuvent apparaitre qu'une seule fois) \n 2-Niveau dificlle (Les lettres peuvent apparaitre plusieurs fois) \n Réponse :"))
+    if (start2==1):
+        print(Master_facile(L_couleurs))
+    elif (start2==2):
+        print(Master_dur(L_couleurs))
+else: 
+    print("Fin de la partie")
+    exit()
