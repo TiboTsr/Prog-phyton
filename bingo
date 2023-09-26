@@ -1,0 +1,18 @@
+class Bingo:
+    def __init__(self, tab):
+        self.matrice = []
+        for i in range(5):
+            ligne = []
+            for j in range(5):
+                ligne.append(tab[5*i] + j)
+            self.matrice.append(ligne)
+
+    def __str__(self):
+        stg = ""
+        for i in range(5):
+            stg += str(self.matrice[i]) + "\n"
+        return stg[:-1]
+    
+T = [i for i in range(25)]
+b = Bingo(T)
+print(b)
